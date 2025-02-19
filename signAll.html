@@ -22,9 +22,6 @@
     .container {
       margin-top: 10px;
     }
-    .no-id-message {
-      margin-top: 10px;
-    }
     .header {
       background-color: #f8f9fa;
       padding: 10px;
@@ -33,8 +30,8 @@
       align-items: center;
     }
     .header img {
-      max-width: 50px; /* Ganti dengan ukuran kustom logo */
-      max-height: 50px; /* Ganti dengan ukuran kustom logo */
+      max-width: 50px;
+      max-height: 50px;
       margin-right: 10px;
     }
     .header h1 {
@@ -45,31 +42,8 @@
   </style>
 </head>
 <body>
-
-  <iframe id="myIframe" src="" frameborder="0"></iframe>
-
-<script>
-  // Mengambil parameter id dari URL
-  var urlParams = new URLSearchParams(window.location.search);
-  var id = urlParams.get('id');
-
-  if (id) {
-    // Menentukan URL iframe dengan parameter id saja
-    var iframeSrc = 'https://script.google.com/macros/s/AKfycbxJRHv89tdJJL2sjU-GPBArwkO0zJFxuLiJTe4Xk4YbVqHRCYsBk6z11gfzV3c7w9NN/exec?signAll=' + encodeURIComponent(id);
-
-    // Set URL iframe
-    document.getElementById('myIframe').src = iframeSrc;
-  } else {
-    // Menyembunyikan iframe dan menampilkan pesan jika id tidak ditemukan
-    document.getElementById('myIframe').style.display = 'none';
-    document.getElementById('no-id-message').classList.remove('d-none');
-  }
-
-  // Mengubah judul halaman menjadi statis karena hanya satu parameter id yang perlu ditangani
-  document.getElementById('pageTitle').textContent = 'E-Sign |Demo';
-</script>
-
-
+  <iframe id="myIframe" src="https://script.google.com/macros/s/AKfycbxJRHv89tdJJL2sjU-GPBArwkO0zJFxuLiJTe4Xk4YbVqHRCYsBk6z11gfzV3c7w9NN/exec?signAll=true" frameborder="0"></iframe>
+  
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
